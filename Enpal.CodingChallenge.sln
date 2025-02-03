@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Api", "src\Enpal.CodingChallenge.Api\Enpal.CodingChallenge.Api.csproj", "{C56EC377-2171-47E5-92D5-AEE31633AF04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{193B6C30-D8F8-4055-B322-E528A4FA0202}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Core", "src\Enpal.CodingChallenge.Core\Enpal.CodingChallenge.Core.csproj", "{2734744C-ACB3-44C1-B2A9-7767549E8C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Infrastructure", "src\Enpal.CodingChallenge.Infrastructure\Enpal.CodingChallenge.Infrastructure.csproj", "{D4336C70-D96A-4740-9662-01112D420C3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FCF17C6B-6126-49A3-8D3C-0C057ABE6124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Contracts", "src\Enpal.CodingChallenge.Contracts\Enpal.CodingChallenge.Contracts.csproj", "{69DB4F79-0525-4DA7-9563-897088C1518D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C56EC377-2171-47E5-92D5-AEE31633AF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56EC377-2171-47E5-92D5-AEE31633AF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56EC377-2171-47E5-92D5-AEE31633AF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56EC377-2171-47E5-92D5-AEE31633AF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2734744C-ACB3-44C1-B2A9-7767549E8C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2734744C-ACB3-44C1-B2A9-7767549E8C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2734744C-ACB3-44C1-B2A9-7767549E8C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2734744C-ACB3-44C1-B2A9-7767549E8C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4336C70-D96A-4740-9662-01112D420C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4336C70-D96A-4740-9662-01112D420C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4336C70-D96A-4740-9662-01112D420C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4336C70-D96A-4740-9662-01112D420C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69DB4F79-0525-4DA7-9563-897088C1518D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69DB4F79-0525-4DA7-9563-897088C1518D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69DB4F79-0525-4DA7-9563-897088C1518D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69DB4F79-0525-4DA7-9563-897088C1518D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C56EC377-2171-47E5-92D5-AEE31633AF04} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
+		{2734744C-ACB3-44C1-B2A9-7767549E8C08} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
+		{D4336C70-D96A-4740-9662-01112D420C3D} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
+		{69DB4F79-0525-4DA7-9563-897088C1518D} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
+	EndGlobalSection
+EndGlobal

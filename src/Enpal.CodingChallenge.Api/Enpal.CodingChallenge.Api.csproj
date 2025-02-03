@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Enpal.CodingChallenge.Contracts\Enpal.CodingChallenge.Contracts.csproj" />
+      <ProjectReference Include="..\Enpal.CodingChallenge.Core\Enpal.CodingChallenge.Core.csproj" />
+      <ProjectReference Include="..\Enpal.CodingChallenge.Infrastructure\Enpal.CodingChallenge.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+﻿services:
+  enpal.codingchallenge.api:
+    image: enpal.codingchallenge.api
+    build:
+      context: .
+      dockerfile: src/Enpal.CodingChallenge.Api/Dockerfile
