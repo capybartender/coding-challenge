@@ -1,6 +1,6 @@
 ﻿namespace Enpal.CodingChallenge.Core.Calendar.Models;
 
-public record Slot
+public sealed record Slot
 {
     public int AvailableCount { get; }
     public DateTimeOffset StartDate { get; }

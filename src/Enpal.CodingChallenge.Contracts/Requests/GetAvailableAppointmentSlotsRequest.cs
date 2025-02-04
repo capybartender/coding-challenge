@@ -2,7 +2,7 @@
 
 namespace Enpal.CodingChallenge.Contracts.Requests;
 
-public record GetAvailableAppointmentSlotsRequest
+public sealed record GetAvailableAppointmentSlotsRequest
 {
     [Required] 
     public DateOnly Date { get; init; }

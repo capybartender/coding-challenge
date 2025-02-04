@@ -9,7 +9,7 @@ namespace Enpal.CodingChallenge.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class CalendarController : ControllerBase
+public sealed class CalendarController : ControllerBase
 {
     private readonly IMediator _mediator;
 
@@ -29,7 +29,7 @@ public class CalendarController : ControllerBase
             request.Language,
             request.Rating);
         var slots = await _mediator.Send(query, ct);
-        var result = slots.ToSlotViewModels();
+        var result = slots.ToViewModels();
         return Ok(result);
     }
 }

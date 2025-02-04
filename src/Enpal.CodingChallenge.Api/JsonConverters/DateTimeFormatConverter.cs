@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Enpal.CodingChallenge.Api.JsonConverters;
 
-public class DateTimeFormatConverter : JsonConverter<DateTime>
+public sealed class DateTimeFormatConverter : JsonConverter<DateTime>
 {
     public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {

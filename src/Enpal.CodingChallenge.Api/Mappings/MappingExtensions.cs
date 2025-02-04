@@ -5,9 +5,9 @@ namespace Enpal.CodingChallenge.Api.Mappings;
 
 public static class MappingExtensions
 {
-    private static SlotViewModel ToSlotViewModel(this Slot slot) 
+    private static SlotViewModel ToViewModel(this Slot slot) 
         => new(slot.AvailableCount, slot.StartDate);
 
-    public static IEnumerable<SlotViewModel> ToSlotViewModels(this IEnumerable<Slot> slots)
-        => slots.Select(slot => slot.ToSlotViewModel());
+    public static SlotViewModel[] ToViewModels(this IEnumerable<Slot> slots)
+        => slots.Select(slot => slot.ToViewModel()).ToArray();
 }

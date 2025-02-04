@@ -3,9 +3,9 @@ using MediatR;
 
 namespace Enpal.CodingChallenge.Core.Calendar.Queries;
 
-public record GetAvailableAppointmentSlotsQuery(
+public sealed record GetAvailableAppointmentSlotsQuery(
     DateOnly Date,
     IEnumerable<string> Products,
     string Language,
     string Rating)
-    : IRequest<IEnumerable<Slot>>;
+    : IRequest<Slot[]>;

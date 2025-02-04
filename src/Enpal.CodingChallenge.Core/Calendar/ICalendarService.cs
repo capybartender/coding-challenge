@@ -1,6 +1,13 @@
-﻿namespace Enpal.CodingChallenge.Core.Calendar;
+﻿using Enpal.CodingChallenge.Core.Calendar.Models;
+
+namespace Enpal.CodingChallenge.Core.Calendar;
 
 public interface ICalendarService
 {
-    public Task<string> GetData();
+    Task<Slot[]> GetAvailableSlots(
+        DateOnly date, 
+        IEnumerable<string> products, 
+        string language,
+        string rating,
+        CancellationToken ct);
 }

@@ -2,7 +2,7 @@
 
 namespace Enpal.CodingChallenge.Contracts.Requests;
 
-public class GetAvailableAppointmentSlotsRequestValidator : AbstractValidator<GetAvailableAppointmentSlotsRequest>
+public sealed class GetAvailableAppointmentSlotsRequestValidator : AbstractValidator<GetAvailableAppointmentSlotsRequest>
 {
     public GetAvailableAppointmentSlotsRequestValidator()
     {
