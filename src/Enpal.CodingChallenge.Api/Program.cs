@@ -1,3 +1,6 @@
+using System.Text.Json;
+using Enpal.CodingChallenge.Api.JsonConverters;
+using Enpal.CodingChallenge.Contracts;
 using Enpal.CodingChallenge.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,11 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services
     .AddOpenApi()
-    .AddControllers();
-
-
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower;
+        options.JsonSerializerOptions.Converters.Add(new DateTimeFormatConverter());
+    });
 
 builder.Services
+    .AddRequestsValidation()
     .AddInfrastructure();
 
 var app = builder.Build();
