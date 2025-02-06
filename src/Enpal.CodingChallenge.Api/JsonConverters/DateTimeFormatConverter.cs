@@ -17,7 +17,7 @@ public sealed class DateTimeFormatConverter : JsonConverter<DateTime>
 
     public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
     {
-        var formattedDateTimeString = value.ToString("yyyy-MM-ddTHH:mm:ss.ffZ");
+        var formattedDateTimeString = value.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
         writer.WriteStringValue(formattedDateTimeString);
     }
 }
