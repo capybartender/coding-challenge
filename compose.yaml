@@ -1,6 +1,16 @@
 ﻿services:
-  enpal.codingchallenge.api:
-    image: enpal.codingchallenge.api
+  api:
     build:
       context: .
       dockerfile: src/Enpal.CodingChallenge.Api/Dockerfile
+    ports:
+        - "3000:8080"
+    environment:
+      ConnectionStrings__CodingChallengeDb: "Host=db;Port=5432;Database=coding-challenge;Username=postgres;Password=mypassword123!;"
+
+  db:
+    build:
+        context: ./database
+        dockerfile: Dockerfile
+    ports:
+        - "5432:5432"
