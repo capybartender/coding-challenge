@@ -23,6 +23,14 @@ public sealed class CalendarController : ControllerBase
         [FromBody] GetAvailableAppointmentSlotsRequest request, 
         CancellationToken ct)
     {
+        GetAvailableAppointmentSlotsRequestValidator validator = new();
+        var validationResult = await validator.ValidateAsync(request, ct);
+
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+        
         var query = new GetAvailableAppointmentSlotsQuery(
             request.Date,
             request.Products,

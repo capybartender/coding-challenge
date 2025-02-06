@@ -18,7 +18,7 @@ builder.Services
 
 builder.Services
     .AddRequestsValidation()
-    .AddInfrastructure();
+    .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

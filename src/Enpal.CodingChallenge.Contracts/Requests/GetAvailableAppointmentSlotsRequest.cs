@@ -5,14 +5,14 @@ namespace Enpal.CodingChallenge.Contracts.Requests;
 public sealed record GetAvailableAppointmentSlotsRequest
 {
     [Required] 
-    public DateOnly Date { get; init; }
+    public required DateOnly Date { get; init; }
     
     [Required]
-    public IEnumerable<string> Products { get; init; }
+    public required IEnumerable<string> Products { get; init; }
     
     [Required] 
-    public string Language { get; init; }
+    public required string Language { get; init; }
     
     [Required]
-    public string Rating { get; init; }
+    public required string Rating { get; init; }
 }

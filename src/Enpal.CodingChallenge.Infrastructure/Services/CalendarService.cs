@@ -2,11 +2,19 @@
 using Enpal.CodingChallenge.Core.Calendar.Models;
 using Enpal.CodingChallenge.Infrastructure.Mappings;
 using Enpal.CodingChallenge.Infrastructure.Models;
+using Enpal.CodingChallenge.Infrastructure.Repositories;
 
 namespace Enpal.CodingChallenge.Infrastructure.Services;
 
 public sealed class CalendarService : ICalendarService
 {
+    private readonly ISlotRepository _slotRepository;
+
+    public CalendarService(ISlotRepository slotRepository)
+    {
+        _slotRepository = slotRepository;
+    }
+    
     public async Task<Slot[]> GetAvailableSlots(
         DateOnly date,
         IEnumerable<string> products,
@@ -14,9 +22,7 @@ public sealed class CalendarService : ICalendarService
         string rating,
         CancellationToken ct)
     {
-        var slot1 = new SlotDal{AvailableCount = 2, StartDate = DateTimeOffset.UtcNow};
-        var slot2 = new SlotDal{AvailableCount = 3, StartDate = DateTimeOffset.UtcNow.AddDays(2)};
-        var data = new [] { slot1, slot2 };
+        var data = await _slotRepository.GetAvailableSlotsAsync(date, products, language, rating, ct);
         var result = data.ToCoreModels();
         return await Task.FromResult(result);
     }
