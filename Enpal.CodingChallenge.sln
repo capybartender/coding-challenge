@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Api", "src\Enpal.CodingChallenge.Api\Enpal.CodingChallenge.Api.csproj", "{C56EC377-2171-47E5-92D5-AEE31633AF04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{193B6C30-D8F8-4055-B322-E528A4FA0202}"
@@ -14,6 +17,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FCF17C6B-6126-49A3-8D3C-0C057ABE6124}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Contracts", "src\Enpal.CodingChallenge.Contracts\Enpal.CodingChallenge.Contracts.csproj", "{69DB4F79-0525-4DA7-9563-897088C1518D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{762B5AB9-3AB8-4330-9645-A9446738A3FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Api.Tests", "tests\Enpal.CodingChallenge.Api.Tests\Enpal.CodingChallenge.Api.Tests.csproj", "{EF83F014-D114-4A2C-8C40-3025E2607E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Contracts.Tests", "tests\Enpal.CodingChallenge.Contracts.Tests\Enpal.CodingChallenge.Contracts.Tests.csproj", "{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Core.Tests", "tests\Enpal.CodingChallenge.Core.Tests\Enpal.CodingChallenge.Core.Tests.csproj", "{4DCEB981-79B5-4D62-99A7-CC332113B1EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enpal.CodingChallenge.Infrastructure.Tests", "tests\Enpal.CodingChallenge.Infrastructure.Tests\Enpal.CodingChallenge.Infrastructure.Tests.csproj", "{5FC1F874-6290-4FF0-8453-1F1F14E77FC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,11 +50,34 @@ Global
 		{69DB4F79-0525-4DA7-9563-897088C1518D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69DB4F79-0525-4DA7-9563-897088C1518D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69DB4F79-0525-4DA7-9563-897088C1518D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF83F014-D114-4A2C-8C40-3025E2607E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF83F014-D114-4A2C-8C40-3025E2607E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF83F014-D114-4A2C-8C40-3025E2607E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF83F014-D114-4A2C-8C40-3025E2607E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DCEB981-79B5-4D62-99A7-CC332113B1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCEB981-79B5-4D62-99A7-CC332113B1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCEB981-79B5-4D62-99A7-CC332113B1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCEB981-79B5-4D62-99A7-CC332113B1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC1F874-6290-4FF0-8453-1F1F14E77FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC1F874-6290-4FF0-8453-1F1F14E77FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC1F874-6290-4FF0-8453-1F1F14E77FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC1F874-6290-4FF0-8453-1F1F14E77FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C56EC377-2171-47E5-92D5-AEE31633AF04} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
 		{2734744C-ACB3-44C1-B2A9-7767549E8C08} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
 		{D4336C70-D96A-4740-9662-01112D420C3D} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
 		{69DB4F79-0525-4DA7-9563-897088C1518D} = {FCF17C6B-6126-49A3-8D3C-0C057ABE6124}
+		{EF83F014-D114-4A2C-8C40-3025E2607E4C} = {762B5AB9-3AB8-4330-9645-A9446738A3FB}
+		{1F32FFBD-9CF7-43E6-9E32-4B8D4A073581} = {762B5AB9-3AB8-4330-9645-A9446738A3FB}
+		{4DCEB981-79B5-4D62-99A7-CC332113B1EF} = {762B5AB9-3AB8-4330-9645-A9446738A3FB}
+		{5FC1F874-6290-4FF0-8453-1F1F14E77FC3} = {762B5AB9-3AB8-4330-9645-A9446738A3FB}
 	EndGlobalSection
 EndGlobal

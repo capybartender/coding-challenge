@@ -13,13 +13,13 @@ public sealed class AppointmentSlotsUseCases : IRequestHandler<GetAvailableAppoi
     public AppointmentSlotsUseCases(ICalendarService calendarService)
         => _calendarService = calendarService;
 
-    public async Task<Slot[]> Handle(GetAvailableAppointmentSlotsQuery cmd, CancellationToken ct)
+    public async Task<Slot[]> Handle(GetAvailableAppointmentSlotsQuery query, CancellationToken ct)
     {
         return await _calendarService.GetAvailableSlots(
-            cmd.Date,
-            cmd.Products,
-            cmd.Language,
-            cmd.Rating,
+            query.Date,
+            query.Products,
+            query.Language,
+            query.Rating,
             ct);
     }
 }
