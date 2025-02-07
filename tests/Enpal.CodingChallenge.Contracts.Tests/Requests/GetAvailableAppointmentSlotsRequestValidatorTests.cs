@@ -6,12 +6,7 @@ public class GetAvailableAppointmentSlotsRequestValidatorTests
 {
     private readonly GetAvailableAppointmentSlotsRequestValidator _validator = new();
 
-    [SetUp]
-    public void Setup()
-    {
-    }
-
-    [Test]
+    [Fact]
     public void ShouldPass()
     {
         // Arrange
@@ -27,10 +22,10 @@ public class GetAvailableAppointmentSlotsRequestValidatorTests
         var result = _validator.Validate(validRequest);
 
         // Assert
-        Assert.That(result.IsValid, Is.True);
+        Assert.True(result.IsValid);
     }
 
-    [Test]
+    [Fact]
     public void ShouldFail()
     {
         // Arrange
@@ -46,7 +41,7 @@ public class GetAvailableAppointmentSlotsRequestValidatorTests
         var result = _validator.Validate(invalidRequest);
 
         // Assert
-        Assert.That(result.IsValid, Is.False);
-        Assert.That(result.Errors.Count, Is.EqualTo(3));
+        Assert.False(result.IsValid);
+        Assert.Equal(3, result.Errors.Count);
     }
 }

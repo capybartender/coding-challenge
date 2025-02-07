@@ -10,12 +10,7 @@ public class AppointmentSlotsUseCasesTests
 {
     private readonly ICalendarService _calendarService = Substitute.For<ICalendarService>();
 
-    [SetUp]
-    public void Setup()
-    {
-    }
-
-    [Test]
+    [Fact]
     public async Task ShouldPass()
     {
         // Arrange

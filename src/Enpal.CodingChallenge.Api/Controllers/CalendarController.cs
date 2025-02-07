@@ -19,7 +19,7 @@ public sealed class CalendarController : ControllerBase
     }
     
     [HttpPost("query")]
-    public async Task<ActionResult<IEnumerable<SlotViewModel>>> Query(
+    public async Task<ActionResult<IEnumerable<SlotViewModel>>> QueryAvailableAppointmentSlots(
         [FromBody] GetAvailableAppointmentSlotsRequest request, 
         CancellationToken ct)
     {

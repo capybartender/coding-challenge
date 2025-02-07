@@ -10,7 +10,7 @@ public sealed class GetAvailableAppointmentSlotsRequestValidator
         RuleFor(request => request.Products)
             .NotNull()
             .NotEmpty()
-            .Must(products => products.All(p => Constants.Products.Contains(p)));
+            .Must(products => products != null && products.All(p => Constants.Products.Contains(p)));
 
         RuleFor(request => request.Language)
             .NotNull()
