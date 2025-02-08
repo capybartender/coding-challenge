@@ -3,7 +3,7 @@ using Enpal.CodingChallenge.Contracts.Requests;
 
 namespace Enpal.CodingChallenge.Api.Tests.TestDataGenerators;
 
-public class TestRequestsGenerator
+public sealed class TestRequestsGenerator
 {
     public static IEnumerable<object[]> GetInvalidRequests()
     {
@@ -95,6 +95,18 @@ public class TestRequestsGenerator
             },
         ];
 
+        yield return
+        [
+            new GetAvailableAppointmentSlotsRequest()
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now),
+                Language = Constants.Languages.First(),
+                Rating = Constants.Ratings.First(),
+                Products = [null!],
+            }
+        ];
+        
+        
         yield return
         [
             new GetAvailableAppointmentSlotsRequest()

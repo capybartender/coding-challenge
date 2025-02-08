@@ -4,7 +4,7 @@ namespace Enpal.CodingChallenge.Core.Calendar;
 
 public interface ICalendarService
 {
-    Task<Slot[]> GetAvailableSlots(
+    Task<Slot[]> GetAvailableSlotsAsync(
         DateOnly date, 
         IEnumerable<string> products, 
         string language,

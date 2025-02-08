@@ -4,7 +4,7 @@ namespace Enpal.CodingChallenge.Infrastructure.Repositories;
 
 public interface ISlotRepository
 {
-    Task<SlotDal[]> GetAvailableSlotsAsync(
+    Task<SlotDalModel[]> GetAvailableSlotsAsync(
         DateOnly date,
         IEnumerable<string> products,
         string language,

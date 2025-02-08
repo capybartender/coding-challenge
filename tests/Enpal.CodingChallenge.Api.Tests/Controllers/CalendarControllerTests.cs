@@ -8,7 +8,7 @@ using NSubstitute;
 
 namespace Enpal.CodingChallenge.Api.Tests.Controllers;
 
-public class CalendarControllerTests
+public sealed class CalendarControllerTests
 {
     private readonly IMediator _mediator = Substitute.For<IMediator>();
     
@@ -34,7 +34,7 @@ public class CalendarControllerTests
 
     [Theory]
     [MemberData(nameof(TestRequestsGenerator.GetInvalidRequests), MemberType = typeof(TestRequestsGenerator))]
-    public async Task Test2(GetAvailableAppointmentSlotsRequest request)
+    public async Task Query_Should_ReturnBadRequestObjectResult(GetAvailableAppointmentSlotsRequest request)
     {
         // Arrange
         var sut = new CalendarController(_mediator);

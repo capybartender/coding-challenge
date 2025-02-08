@@ -3,13 +3,13 @@ using Enpal.CodingChallenge.Infrastructure.Models;
 
 namespace Enpal.CodingChallenge.Infrastructure.Repositories;
 
-public class SlotRepository : BaseRepository, ISlotRepository
+public sealed class SlotRepository : BaseRepository, ISlotRepository
 {
     public SlotRepository(string connectionString)
         : base(connectionString)
     {}
 
-    public async Task<SlotDal[]> GetAvailableSlotsAsync(
+    public async Task<SlotDalModel[]> GetAvailableSlotsAsync(
         DateOnly date,
         IEnumerable<string> products,
         string language,
@@ -44,7 +44,7 @@ public class SlotRepository : BaseRepository, ISlotRepository
         parameters.Add("@Language", language);
         parameters.Add("@Rating", rating);
 
-        var slots = await connection.QueryAsync<SlotDal>(query, parameters);
+        var slots = await connection.QueryAsync<SlotDalModel>(query, parameters);
 
         return slots.ToArray();
     }

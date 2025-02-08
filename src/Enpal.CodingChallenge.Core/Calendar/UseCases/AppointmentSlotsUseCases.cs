@@ -15,7 +15,7 @@ public sealed class AppointmentSlotsUseCases : IRequestHandler<GetAvailableAppoi
 
     public async Task<Slot[]> Handle(GetAvailableAppointmentSlotsQuery query, CancellationToken ct)
     {
-        return await _calendarService.GetAvailableSlots(
+        return await _calendarService.GetAvailableSlotsAsync(
             query.Date,
             query.Products,
             query.Language,

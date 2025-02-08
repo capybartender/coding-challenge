@@ -6,12 +6,12 @@ using NSubstitute;
 
 namespace Enpal.CodingChallenge.Core.Tests.Calendar.UseCases;
 
-public class AppointmentSlotsUseCasesTests
+public sealed class AppointmentSlotsUseCasesTests
 {
     private readonly ICalendarService _calendarService = Substitute.For<ICalendarService>();
 
     [Fact]
-    public async Task ShouldPass()
+    public async Task GetAvailableSlotsAsync_Should_BeCalled()
     {
         // Arrange
         AppointmentSlotsUseCases sut = new (_calendarService);
@@ -27,7 +27,7 @@ public class AppointmentSlotsUseCasesTests
         //Assert
         Received.InOrder(async () =>
         {
-            await _calendarService.GetAvailableSlots(query.Date, query.Products, query.Language, query.Rating, CancellationToken.None);
+            await _calendarService.GetAvailableSlotsAsync(query.Date, query.Products, query.Language, query.Rating, CancellationToken.None);
         });
     }
 }

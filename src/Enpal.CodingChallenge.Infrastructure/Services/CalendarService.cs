@@ -1,7 +1,6 @@
 ﻿using Enpal.CodingChallenge.Core.Calendar;
 using Enpal.CodingChallenge.Core.Calendar.Models;
 using Enpal.CodingChallenge.Infrastructure.Mappings;
-using Enpal.CodingChallenge.Infrastructure.Models;
 using Enpal.CodingChallenge.Infrastructure.Repositories;
 
 namespace Enpal.CodingChallenge.Infrastructure.Services;
@@ -15,7 +14,7 @@ public sealed class CalendarService : ICalendarService
         _slotRepository = slotRepository;
     }
     
-    public async Task<Slot[]> GetAvailableSlots(
+    public async Task<Slot[]> GetAvailableSlotsAsync(
         DateOnly date,
         IEnumerable<string> products,
         string language,

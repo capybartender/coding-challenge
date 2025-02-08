@@ -5,9 +5,9 @@ namespace Enpal.CodingChallenge.Infrastructure.Mappings;
 
 public static class MappingExtensions
 {
-    private static Slot ToCoreModel(this SlotDal slot) 
+    private static Slot ToCoreModel(this SlotDalModel slot) 
         => new(slot.AvailableCount, slot.StartDate);
 
-    public static Slot[] ToCoreModels(this IEnumerable<SlotDal> slots)
+    public static Slot[] ToCoreModels(this IEnumerable<SlotDalModel> slots)
         => slots.Select(slot => slot.ToCoreModel()).ToArray();
 }

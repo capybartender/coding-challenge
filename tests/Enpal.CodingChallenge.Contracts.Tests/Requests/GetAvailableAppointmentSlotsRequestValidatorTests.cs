@@ -2,12 +2,12 @@
 
 namespace Enpal.CodingChallenge.Contracts.Tests.Requests;
 
-public class GetAvailableAppointmentSlotsRequestValidatorTests
+public sealed class GetAvailableAppointmentSlotsRequestValidatorTests
 {
     private readonly GetAvailableAppointmentSlotsRequestValidator _validator = new();
 
     [Fact]
-    public void ShouldPass()
+    public void Request_Should_BeValid()
     {
         // Arrange
         var validRequest = new GetAvailableAppointmentSlotsRequest 
@@ -26,7 +26,7 @@ public class GetAvailableAppointmentSlotsRequestValidatorTests
     }
 
     [Fact]
-    public void ShouldFail()
+    public void Request_Should_NotBeValid()
     {
         // Arrange
         var invalidRequest = new GetAvailableAppointmentSlotsRequest

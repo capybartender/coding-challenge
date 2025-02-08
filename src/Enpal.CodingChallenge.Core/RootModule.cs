@@ -1,3 +1,6 @@
-﻿namespace Enpal.CodingChallenge.Core;
+﻿using JetBrains.Annotations;
 
-public record RootModule();
+namespace Enpal.CodingChallenge.Core;
+
+[UsedImplicitly]
+public sealed record RootModule();
